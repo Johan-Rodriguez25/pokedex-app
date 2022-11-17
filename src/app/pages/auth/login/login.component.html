@@ -1,0 +1,65 @@
+<div class="container">
+  <form>
+    <div class="form-field">
+      <input
+        [(ngModel)]="nickname"
+        name="nickname"
+        #ctrl="ngModel"
+        type="text"
+        placeholder="Username"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <input
+        [(ngModel)]="password"
+        name="password"
+        #ctrl="ngModel"
+        type="password"
+        placeholder="Password"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <button class="btn" type="submit" (click)="onLogin()">Log in</button>
+    </div>
+  </form>
+</div>
+
+<!-- <div class="login-form">
+  <mat-card>
+    <mat-card-content>
+      <h1>LOGIN</h1>
+      <mat-form-field class="full-width-input">
+        <input
+          [(ngModel)]="nickname"
+          #ctrl="ngModel"
+          type="text"
+          matInput
+          placeholder="Username"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width-input separator">
+        <input
+          [(ngModel)]="password"
+          #ctrl="ngModel"
+          type="password"
+          matInput
+          placeholder="Password"
+          required
+        />
+      </mat-form-field>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        (click)="onLogin()"
+      >
+        Login
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div> -->

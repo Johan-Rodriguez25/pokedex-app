@@ -1,0 +1,51 @@
+<div class="container">
+  <form>
+    <div class="form-field">
+      <input
+        [(ngModel)]="name"
+        name="name"
+        #ctrl="ngModel"
+        type="text"
+        placeholder="Name"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <input
+        [(ngModel)]="nickname"
+        name="nickname"
+        #ctrl="ngModel"
+        type="text"
+        placeholder="Username"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <input
+        [(ngModel)]="team"
+        name="team"
+        #ctrl="ngModel"
+        type="text"
+        placeholder="Team"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <input
+        [(ngModel)]="password"
+        name="password"
+        #ctrl="ngModel"
+        type="password"
+        placeholder="Password"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <button class="btn" type="submit" (click)="onSignup()">Sign up</button>
+    </div>
+  </form>
+</div>
