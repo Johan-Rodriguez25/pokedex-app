@@ -19,19 +19,21 @@ export class PokemonListComponent implements OnInit {
   }
 
   getPokemons() {
-    this.pokemonService.getPokemons(this.page + 0, 10).subscribe((res: any) => {
-      this.totalPokemons = res.count;
+    this.pokemonService
+      .getPokemons(this.page * 10, 10)
+      .subscribe((res: any) => {
+        this.totalPokemons = res.count;
 
-      res.results.forEach((result: any) => {
-        this.pokemonService.getMoreData(result.name).subscribe((res: any) => {
-          this.pokemons.push(res);
-          console.log(this.pokemons);
+        res.results.forEach((result: any) => {
+          this.pokemonService.getMoreData(result.name).subscribe((res: any) => {
+            this.pokemons.push(res);
+            console.log(this.pokemons);
+          });
         });
       });
-    });
   }
 
   getDetail(name: string) {
-    this.router.navigate(['/detail', name])
+    this.router.navigate(['/detail', name]);
   }
 }
